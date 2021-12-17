@@ -1,0 +1,410 @@
+@media screen and (max-width: 430px) {
+    .container {
+        max-width: 390px;
+        margin: auto;
+    }
+/* Header */
+
+    header {
+        background-color: #191919;
+        position: fixed;
+        width: 100%;
+    }
+    #header {
+        padding: 0.313rem 0;
+    }
+    .header {
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding: 0.625rem 0 0.313rem 0;
+    }
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        height: 2vh;
+        position: relative;
+    }
+
+    .client-header {
+        transform: translateY(22px);
+        padding-right: 0.5rem;
+    }
+
+    .client {
+        color: rgba(255, 255, 255, 0.555);
+        padding-right: 1rem;
+        font-size: 0.7rem;
+    }
+    .client:hover {
+        color: #fff;
+    }
+
+    /* Navbar */
+
+    #main-nav {
+        background-color: #191919;
+        padding: 0.313rem 0 0.625rem 0;
+        padding-top: 3.438rem;
+    }
+    #nav ul {
+        display: flex;
+    }
+
+    .nav-li {
+        padding: 0 0.938rem;
+        color: rgba(255, 255, 255, 0.555);
+        font-weight: 500;
+    }
+
+    .nav-li:hover {
+        color: #fff;
+    }
+
+    // #nav ul li {
+    //     padding: 0 0.938rem;
+    // }
+
+    // #nav ul li a {
+    //     color: rgba(255, 255, 255, 0.555);
+    //     font-weight: 500;
+    // }
+
+    // #nav ul li a:hover {
+    //     color: #fff;
+    // }
+    .information {
+        
+        margin-top: -1rem;
+    }
+    .main-heading {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.3rem;
+        margin-top: 1.25rem;
+        padding-top: 0.313rem;
+        padding-left: 0.625rem;
+
+    }
+
+    /* League Title */
+    .league-title {
+        color: #fff;
+        padding: 1.25rem 0.625rem 0 0.625rem;
+        font-weight: 400;
+    }
+    .league-title i {
+        padding-left: 0.938rem;
+    }
+
+    /* Matches */
+
+    .match {
+        background-color: #191919d2;
+        border-radius: 0.313rem;
+        padding: 1.25rem 0.625rem;
+        margin: 2.5rem 1.25rem 0.625rem 1.25rem;
+    }
+    .match ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    .match ul li {
+        color: rgba(255, 255, 255, 0.555);
+        padding: 1.25rem 0;
+    }
+
+    /* Footer */
+
+    #footer {
+        padding: 1.875rem 0;
+    }
+    #footer p {
+        color: rgba(255, 255, 255, 0.555);
+        text-align: center;
+        padding-bottom: 0.625rem;
+    }
+    .sites ul {
+        display: flex;
+        justify-content: center;
+    }
+    .sites ul li a {
+        padding: 0 1.25rem
+    }
+    .sites ul li a i:hover {
+        color: rgb(187, 43, 43);
+    }
+    .copyright {
+        padding: 0.625rem 0 0 0.313rem;
+    }
+    small {
+        color: red;
+    }
+    
+    .show {
+        display: none;
+    }
+    
+    .score-btn {
+        color: #fff;
+        padding: 0.2rem 0.5rem;
+        transform: translateX(130px);
+    }
+    .login-page {
+        align-items: center;
+    }
+    .client-label {
+        padding-right: 0.5rem;
+    }
+    .client-input {
+        margin-left: 0.5rem;
+    }
+}
+
+/* Media Query for Landscape Mobile */
+
+@media (min-width:431px) and (max-width: 768px) {
+    .container {
+        max-width: 680px;
+        margin: auto;
+    }
+/* Header */
+
+    header {
+        background-color: #191919;
+        position: fixed;
+        width: 100%;
+    }
+    #header {
+        
+        padding: 0.313rem 0;
+    }
+    .header {
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding-left: 13px;
+    }
+
+    /* Navbar */
+
+    #main-nav {
+        background-color: #191919;
+        padding: 0.625rem 0;
+        padding-top: 80px;
+    }
+    #nav ul {
+        display: flex;
+    }
+    #nav ul li {
+        padding: 0 0.625rem;
+    }
+    #nav ul li a {
+        color: rgba(255, 255, 255, 0.555);
+        font-weight: 500;
+    }
+    #nav ul li a:hover {
+        color: #fff;
+    }
+    .information {
+        
+        margin-top: -1rem;
+    }
+    .main-heading {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.3rem;
+        margin-top: 1.25rem;
+        padding-top: 0.313rem;
+        padding-left: 0.625rem;
+
+    }
+
+    /* League Title */
+    .league-title {
+        color: #fff;
+        padding: 30px 0.625rem 0.625rem 0.938rem;
+        font-weight: 400;
+    }
+    .league-title i {
+        padding: 0 0.938rem 1.25rem 1.25rem;
+    }
+
+    /* Matches */
+
+    .match {
+        background-color: #191919d2;
+        border-radius: 0.313rem;
+        padding: 1.25rem 0.625rem;
+        margin: 1.25rem 50px 1.25rem 50px;
+    }
+    .match ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    .match ul li {
+        color: rgba(255, 255, 255, 0.555);
+        padding: 1.25rem 0;
+    }
+
+    /* Footer */
+
+    #footer {
+        padding: 30px 0;
+    }
+    #footer p {
+        color: rgba(255, 255, 255, 0.555);
+        text-align: center;
+        padding-bottom: 0.625rem;
+        font-size: 1.3rem;
+    }
+    .sites ul {
+        display: flex;
+        justify-content: center;
+    }
+    .sites ul li a {
+        padding: 0 1.25rem
+    }
+    .sites ul li a i {
+        padding: 0.313rem;
+        font-size: 1.5rem;
+    }
+    .sites ul li a i:hover {
+        color: rgb(187, 43, 43);
+    }
+    .copyright {
+        padding: 0.625rem 0 0 0.313rem;
+        font-size: 1.3rem;
+    }
+    small {
+        color: red;
+        font-size: 1rem;
+    }
+    
+    .show {
+        display: none;
+    }
+    
+}
+@media screen and (min-width:769px) {
+    .container {
+        max-width: 980px;
+        margin: auto;
+    }
+/* Header */
+
+    header {
+        background-color: #191919;
+        position: fixed;
+        width: 100%;
+    }
+    #header {
+        
+        padding: 0.313rem 0;
+    }
+    .header {
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding-left: 0.313rem;
+    }
+
+    /* Navbar */
+
+    #main-nav {
+        background-color: #191919;
+        padding: 0.625rem 0;
+        padding-top: 80px;
+    }
+    #nav ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #nav ul li {
+        padding: 0 0.625rem;
+    }
+    #nav ul li a {
+        color: rgba(255, 255, 255, 0.555);
+        font-weight: 500;
+    }
+    #nav ul li a:hover {
+        color: #fff;
+    }
+    .information {
+        
+        margin-top: -1rem;
+    }
+    .main-heading {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.3rem;
+        margin-top: 1.25rem;
+        padding-top: 0.313rem;
+        padding-left: 0.625rem;
+
+    }
+
+    /* League Title */
+    .league-title {
+        color: #fff;
+        padding: 30px 0.625rem 0.625rem 0.938rem;
+        font-weight: 400;
+    }
+    .league-title i {
+        padding: 0 0.938rem 1.25rem 1.25rem;
+    }
+
+    /* Matches */
+
+    .match {
+        background-color: #191919d2;
+        border-radius: 0.313rem;
+        padding: 1.25rem 0.938rem;
+        margin: 1.25rem 270px;
+        /* margin: 1.25rem 50px 1.25rem 50px; */
+    }
+    .match ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    .match ul li {
+        color: rgba(255, 255, 255, 0.555);
+        padding: 1.25rem 0;
+    }
+
+    /* Footer */
+
+    #footer {
+        padding: 30px 0;
+    }
+    #footer p {
+        color: rgba(255, 255, 255, 0.555);
+        text-align: center;
+        padding-bottom: 0.625rem;
+        font-size: 1.3rem;
+    }
+    .sites ul {
+        display: flex;
+        justify-content: center;
+    }
+    .sites ul li a {
+        padding: 0 1.25rem
+    }
+    .sites ul li a i {
+        padding: 5px;
+        font-size: 1.5rem;
+    }
+    .sites ul li a i:hover {
+        color: rgb(187, 43, 43);
+    }
+    .copyright {
+        padding: 0.625rem 0 0 0.313rem;
+        font-size: 1.3rem;
+    }
+    small {
+        color: red;
+        font-size: 1rem;
+    }
+    
+    .show {
+        display: none;
+    }
+    
+}
