@@ -12,19 +12,19 @@ export const SidebarData = [
     },
     {
         title: 'Upload',
-        path: '#',
+        path: '/upload',
         icon: <FaIcons.FaFileUpload />,
         cName: 'sidenav-text'
     },
     {
         title: 'AboutUs',
-        path: "#",
+        path: "/about",
         icon: <FaIcons.FaInfoCircle />,
         cName: 'sidenav-text'
     },
     {
         title: 'Logout',
-        path: '/header',
+        path: '/',
         icon: <FaIcons.FaSignOutAlt />,
         cName: 'sidenav-text'
     }

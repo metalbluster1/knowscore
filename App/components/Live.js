@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function Live() {
+function Live(props) {
 
 
     return (
@@ -19,7 +19,7 @@ function Live() {
                             <h3>Team 1</h3>
                         </li>
                         <li>
-                            <h3>Team 1 score</h3>
+                            <h3>{props.score1}</h3>
                         </li>
                     </ul>
                     <ul>
@@ -27,7 +27,7 @@ function Live() {
                             <h3>Team 2</h3>
                         </li>
                         <li>
-                            <h3>Team 2 score</h3>
+                            <h3>{props.score2}</h3>
                         </li>
                     </ul>
                     <ul>
@@ -35,7 +35,15 @@ function Live() {
                             <h3>Match Result</h3>
                         </li>
                         <li>
-                            <h3>Result</h3>
+                            <h3>{props.result}</h3>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>Player of the Match</h3>
+                        </li>
+                        <li>
+                            <h3>{props.pom}</h3>
                         </li>
                     </ul>
                 </div>

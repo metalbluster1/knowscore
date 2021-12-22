@@ -5,6 +5,7 @@ import * as AiIcons from 'react-icons/ai'
 import { SidebarData } from './SideBarData'
 
 
+
 function HeaderLogin() {
 
     const [sideBarmenu, setSideBarMenu] = useState([false])
@@ -19,8 +20,8 @@ function HeaderLogin() {
                 </div>
                 <div className="client-header">
                     <ul>
-                        <Link className="login client">Name</Link>
-                        <Link onClick={showSidebar} className="signupclient" ><i className='fas fa-ellipsis-h'></i></Link>
+                        <Link to="#" className="login client" >Name</Link>
+                        <Link to='#' onClick={showSidebar} className="signupclient" ><i className='fas fa-ellipsis-h'></i></Link>
                     </ul>
                 </div>
                 <nav className={sideBarmenu ? 'sidenav-menu active' : 'sidenav'}>
