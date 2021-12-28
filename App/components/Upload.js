@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { ReactDOM } from 'react'
+import { Link } from 'react-router-dom'
 import Live from './Live'
 
 
@@ -73,6 +74,7 @@ function Upload(props) {
                             </li>
                         </ul>
                         <button className="btn score-btn">Submit</button>
+                        {/* <Link to="/live"><button className="btn score-btn">Submit</button></Link> */}
                     </div>
                 </div>
             </section>

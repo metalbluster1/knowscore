@@ -1,7 +1,14 @@
 import React from 'react'
+import * as AiIcons from 'react-icons/ai'
 
 
 function Live(props) {
+
+    let count = 0
+
+    function handlerDelete() {
+        props.setGames(prev => prev.filter(games => games.id != props.id))
+    }
 
 
     return (
@@ -12,7 +19,7 @@ function Live(props) {
                         <li>
                             <h3 className="match-no">1st MATCH</h3>
                         </li>
-                        <li><small>Live</small></li>
+                        <li><small>Live   </small><small><button onClick={handlerDelete}><AiIcons.AiOutlineDelete /></button></small></li>
                     </ul>
                     <ul>
                         <li>
