@@ -20,9 +20,10 @@ import About from './components/About'
 function OurApp() {
 
     const [games, setGames] = useState([])
-    const [loginToken, setLoginToken] = useState([])
 
-    const [loggedIn, setLoggedIn] = useState(false)
+    const [recent, setRecent] = useState([])
+
+    const [loginToken, setLoginToken] = useState([])
 
 
 
@@ -39,28 +40,27 @@ function OurApp() {
         localStorage.setItem("games", JSON.stringify(games))
     }, [games])
 
-    ///----------- For the Login Token --------
     //Render for the first time
-    // useEffect(() => {
-    //     if (localStorage.getItem('loginToken')) {
-    //         setLoginToken(JSON.parse(localStorage.getItem('loginToken')))
-    //     }
-    // }, [])
+    useEffect(() => {
+        if (localStorage.getItem("logintoken")) {
+            setLoginToken(JSON.parse(localStorage.getItem("logintoken")))
+        }
+    }, [])
 
-    // //Render for every time changes
-    // useEffect(() => {
-    //     localStorage.setItem('loginToken', JSON.stringify(loginToken))
-    // }, [loginToken])
+    //Render every time changes
+    useEffect(() => {
+        localStorage.setItem("logintoken", JSON.stringify(loginToken))
+    }, [loginToken])
 
     return (
         <BrowserRouter>
-            <HeaderLogin />
+            <Header setLoginToken={setLoginToken} />
             <Title />
             <Navigation />
             <Switch>
                 <Route path="/live">
                     <ul>
-                        {games.map(i => <Live games={games} setGames={setGames} id={i.id} score1={i.score1} score2={i.score2} result={i.result} pom={i.pom} key={i.id} />)}
+                        {games.map(i => <Live games={games} setGames={setGames} id={i.id} date={i.date} time={i.time} team1={i.team1} team2={i.team2} score1={i.score1} score2={i.score2} result={i.result} pom={i.pom} key={i.id} />)}
                     </ul>
 
                 </Route>
@@ -88,57 +88,6 @@ function OurApp() {
     )
 
 
-}
-
-function Game() {
-
-
-    return (
-        <section id="live-information" className="information">
-            <div className="live-matchs" id="live-matches">
-                <div className="match-1 match">
-                    <ul>
-                        <li>
-                            <h3 className="match-no">1st MATCH</h3>
-                        </li>
-                        <li><small>Live</small><small>delete</small></li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h3>Team 1</h3>
-                        </li>
-                        <li>
-                            <h3></h3>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h3>Team 2</h3>
-                        </li>
-                        <li>
-                            <h3></h3>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h3>Match Result</h3>
-                        </li>
-                        <li>
-                            <h3></h3>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h3>Player of the Match</h3>
-                        </li>
-                        <li>
-                            <h3></h3>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    )
 }
 
 

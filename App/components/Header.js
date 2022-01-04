@@ -1,15 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
-import { SidebarData } from './SideBarData'
+
+import HeaderLogin from './HeaderLogin'
+import HeaderLoggedOut from './HeaderLoggedOut'
+import ClientLogin from './ClientLogin'
 
 
-function Header() {
+function Header(props) {
 
-    // const [sideBarmenu, setSideBarMenu] = useState([false])
-    // const showSidebar = () => setSideBarMenu(!sideBarmenu)
+    const [loggedIn, setLoggedIn] = useState()
+
+    useEffect(() => {
+        if ((localStorage.getItem("logintoken"))) {
+            setLoggedIn(true)
+        }
+        else {
+            setLoggedIn(false)
+        }
+    }, [])
 
     return (
         <>
@@ -18,12 +29,7 @@ function Header() {
                     <div id="header" className="container">
                         <h1 className="header">LOCAL CRICKET</h1>
                     </div>
-                    <div className="client-header">
-                        <ul>
-                            <Link className="login client" to="/loginpage">Login</Link>
-                            <Link className="signup client" to="/signinpage">SignUp</Link>
-                        </ul>
-                    </div>
+                    {loggedIn ? <HeaderLogin setLoggedIn={setLoggedIn} /> : <HeaderLoggedOut setLoggedIn={setLoggedIn} />}
                 </div>
             </header>
         </>

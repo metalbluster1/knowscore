@@ -226,6 +226,26 @@
         text-align: center;
         
     }
+
+    .logoutBtn {
+        background-color: black;
+        border: none;
+        color: #fff;
+        padding: 0 0.5rem 0 0;
+    }
+    .logoutBtn:hover {
+        background-color: #1a83ff;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .logoutIcon {
+        padding-left: 0.5rem;
+        font-size: 1rem;
+    }
+    .logoutText {
+        padding-left: 0.5rem;
+        font-size: 1rem;
+    }
 }
 
 /* Media Query for Landscape Mobile */

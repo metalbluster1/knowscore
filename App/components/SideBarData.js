@@ -22,10 +22,10 @@ export const SidebarData = [
         icon: <FaIcons.FaInfoCircle />,
         cName: 'sidenav-text'
     },
-    {
-        title: 'Logout',
-        path: '/',
-        icon: <FaIcons.FaSignOutAlt />,
-        cName: 'sidenav-text'
-    }
+    // {
+    //     title: 'Logout',
+    //     path: '/',
+    //     icon: <FaIcons.FaSignOutAlt />,
+    //     cName: 'sidenav-text',
+    // }
 ]

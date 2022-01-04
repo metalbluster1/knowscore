@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom'
 
 function ClientLogin(props) {
 
+
     const [userName, setUserName] = useState("")
     const [password, setPassword] = useState("")
 
     function handleLoginSubmit(e) {
         e.preventDefault()
+        console.log("successfully submited")
         props.setLoginToken(prev => prev.concat({ userName, password, id: Date.now() }))
         setUserName("")
         setPassword("")
@@ -30,7 +32,8 @@ function ClientLogin(props) {
                                 <input value={password} onChange={e => setPassword(e.target.value)} className="client-input" type="password" htmlFor="password" placeholder="password" required></input>
                             </li>
                         </ul>
-                        <Link className="nav-li" id="live-information" to="/"><button className="btn score-btn">Submit</button></Link>
+                        <button className="nav-li" id="live-information" className="btn score-btn">Submit</button>
+                        {/* <Link className="nav-li" id="live-information" to="/"><button className="btn score-btn">Submit</button></Link> */}
                     </div>
                 </div>
             </section>

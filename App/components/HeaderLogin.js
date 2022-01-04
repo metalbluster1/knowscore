@@ -6,18 +6,21 @@ import { SidebarData } from './SideBarData'
 
 
 
-function HeaderLogin() {
+function HeaderLogin(props) {
 
     const [sideBarmenu, setSideBarMenu] = useState([false])
 
     const showSidebar = () => setSideBarMenu(!sideBarmenu)
 
+    function handlerLogout(e) {
+        e.preventDefault()
+        props.setLoggedIn(false)
+        localStorage.removeItem("logintoken")
+    }
+
     return (
         <header>
             <div className="main-header">
-                <div id="header" className="container">
-                    <h1 className="header">LOCAL CRICKET</h1>
-                </div>
                 <div className="client-header">
                     <ul>
                         <Link to="#" className="login client" >Name</Link>
@@ -42,6 +45,7 @@ function HeaderLogin() {
                                 </li>
                             )
                         })}
+                        <button onClick={handlerLogout} className='logoutBtn'><span className='logoutIcon'><FaIcons.FaSignOutAlt /></span><span className='logoutText'>Logout</span></button>
                     </ul>
                 </nav>
             </div>

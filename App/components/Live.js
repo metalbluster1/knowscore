@@ -4,7 +4,6 @@ import * as AiIcons from 'react-icons/ai'
 
 function Live(props) {
 
-    let count = 0
 
     function handlerDelete() {
         props.setGames(prev => prev.filter(games => games.id != props.id))
@@ -17,13 +16,21 @@ function Live(props) {
                 <div className="match-1 match">
                     <ul>
                         <li>
-                            <h3 className="match-no">1st MATCH</h3>
+                            <h3 className="match-no">MATCH Details</h3>
                         </li>
                         <li><small>Live   </small><small><button onClick={handlerDelete}><AiIcons.AiOutlineDelete /></button></small></li>
                     </ul>
                     <ul>
                         <li>
-                            <h3>Team 1</h3>
+                            <h3>{props.date}</h3>
+                        </li>
+                        <li>
+                            <h3>{props.time}</h3>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>{props.team1}</h3>
                         </li>
                         <li>
                             <h3>{props.score1}</h3>
@@ -31,7 +38,7 @@ function Live(props) {
                     </ul>
                     <ul>
                         <li>
-                            <h3>Team 2</h3>
+                            <h3>{props.team2}</h3>
                         </li>
                         <li>
                             <h3>{props.score2}</h3>
@@ -39,7 +46,7 @@ function Live(props) {
                     </ul>
                     <ul>
                         <li>
-                            <h3>Match Result</h3>
+                            <h3>Team Won</h3>
                         </li>
                         <li>
                             <h3>{props.result}</h3>
