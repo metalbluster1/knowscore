@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 import * as FaIcons from 'react-icons/fa'
@@ -8,19 +8,35 @@ import HeaderLogin from './HeaderLogin'
 import HeaderLoggedOut from './HeaderLoggedOut'
 import ClientLogin from './ClientLogin'
 
+import StateContext from '../StateContext'
 
 function Header(props) {
 
-    const [loggedIn, setLoggedIn] = useState()
+    // const { setLoginToken } = useContext(ExampleContext)
+    // const { setLoggedIn } = useContext(ExampleContext)
+    // const { loggedIn } = useContext(ExampleContext)
+    // const [loggedIn, setLoggedIn] = useState(false)
 
-    useEffect(() => {
-        if ((localStorage.getItem("logintoken"))) {
-            setLoggedIn(true)
-        }
-        else {
-            setLoggedIn(false)
-        }
-    }, [])
+    const appState = useContext(StateContext)
+
+
+    // useEffect(() => {
+    //     if ((localStorage.getItem("logintoken"))) {
+    //         const loginData = localStorage.getItem("logintoken")
+    //         if (!loginData.userName) {
+    //             setLoggedIn(true)
+    //         }
+    //         else setLoggedIn(false)
+
+    //     }
+    //     else {
+    //         setLoggedIn(false)
+    //     }
+    // }, [])
+
+
+
+
 
     return (
         <>
@@ -29,7 +45,7 @@ function Header(props) {
                     <div id="header" className="container">
                         <h1 className="header">LOCAL CRICKET</h1>
                     </div>
-                    {loggedIn ? <HeaderLogin setLoggedIn={setLoggedIn} /> : <HeaderLoggedOut setLoggedIn={setLoggedIn} />}
+                    {appState.loggedIn ? <HeaderLogin /> : <HeaderLoggedOut />}
                 </div>
             </header>
         </>

@@ -1,12 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
 import { SidebarData } from './SideBarData'
 
+import DispatchContext from '../DispatchContext'
+import StateContext from '../StateContext'
+
+
 
 
 function HeaderLogin(props) {
+
+    // const { setLoggedIn } = useContext(ExampleContext)
+
+    const appDispatch = useContext(DispatchContext)
+    const appState = useContext(StateContext)
 
     const [sideBarmenu, setSideBarMenu] = useState([false])
 
@@ -14,7 +23,8 @@ function HeaderLogin(props) {
 
     function handlerLogout(e) {
         e.preventDefault()
-        props.setLoggedIn(false)
+        // setLoggedIn(false)
+        appDispatch({ type: "logout" })
         localStorage.removeItem("logintoken")
     }
 

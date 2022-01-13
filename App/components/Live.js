@@ -1,66 +1,42 @@
 import React from 'react'
-import * as AiIcons from 'react-icons/ai'
 
-
-function Live(props) {
-
-
-    function handlerDelete() {
-        props.setGames(prev => prev.filter(games => games.id != props.id))
-    }
-
-
+function Live() {
     return (
-        <section id="live-information" className="information">
-            <div className="live-matchs" id="live-matches">
-                <div className="match-1 match">
+        <section id="recent-information" className="information">
+            <div className="recent-matchs" id="recent-matches">
+                {/* <div className="match-1 match">
                     <ul>
                         <li>
-                            <h3 className="match-no">MATCH Details</h3>
+                            <h3 className="match-no">1st MATCH</h3>
                         </li>
-                        <li><small>Live   </small><small><button onClick={handlerDelete}><AiIcons.AiOutlineDelete /></button></small></li>
+                        <li><small>Live</small></li>
                     </ul>
                     <ul>
                         <li>
-                            <h3>{props.date}</h3>
+                            <h3>Rayudu Kings</h3>
                         </li>
                         <li>
-                            <h3>{props.time}</h3>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h3>{props.team1}</h3>
-                        </li>
-                        <li>
-                            <h3>{props.score1}</h3>
+                            <h3>score</h3>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <h3>{props.team2}</h3>
+                            <h3>Prakash Rocks</h3>
                         </li>
                         <li>
-                            <h3>{props.score2}</h3>
+                            <h3>score</h3>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <h3>Team Won</h3>
+                            <h3>Match Result</h3>
                         </li>
                         <li>
-                            <h3>{props.result}</h3>
+                            <h3>result</h3>
                         </li>
                     </ul>
-                    <ul>
-                        <li>
-                            <h3>Player of the Match</h3>
-                        </li>
-                        <li>
-                            <h3>{props.pom}</h3>
-                        </li>
-                    </ul>
-                </div>
+                </div> */}
+                <h3 className='livetext'>This page feature is coming soon</h3>
             </div>
         </section>
     )

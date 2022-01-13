@@ -212,6 +212,8 @@
         padding: 0.2rem 0.5rem;
         transform: translateX(130px);
     }
+
+
     .login-page {
         align-items: center;
     }
@@ -245,6 +247,16 @@
     .logoutText {
         padding-left: 0.5rem;
         font-size: 1rem;
+    }
+
+    .uploadtitle {
+        font-size: 0.8rem;
+    }
+    
+    .livetext {
+        color: #fff;
+        text-align: center;
+        padding-top: 4rem;
     }
 }
 

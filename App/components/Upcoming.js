@@ -1,38 +1,37 @@
 import React from 'react'
+import * as AiIcons from 'react-icons/ai'
 
-function Upcoming() {
+function Upcoming(props) {
+
+    function handlerDelete() {
+        props.setUpcomingGames(prev => prev.filter(upcomingGames => upcomingGames.id != props.id))
+    }
+
     return (
         <section id="upcoming-information" className="information">
             <div className="upcoming-matchs" id="upcoming-matches">
                 <div className="match-1 match">
                     <ul>
                         <li>
-                            <h3 className="match-no">1st MATCH</h3>
+                            <h3 className="match-no">Match Details</h3>
                         </li>
-                        <li><small>Upcoming</small></li>
+                        <li><small>Upcoming   <small><button onClick={handlerDelete}><AiIcons.AiOutlineDelete /></button></small></small></li>
                     </ul>
                     <ul>
                         <li>
-                            <h3>Rayudu Kings</h3>
+                            <h3>Date: {props.date}</h3>
                         </li>
                         <li>
-                            <h3>score</h3>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h3>Prakash Rocks</h3>
-                        </li>
-                        <li>
-                            <h3>score</h3>
+                            <h3>Time: {props.time}</h3>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <h3>Match Result</h3>
+                            <h3>{props.team1}</h3>
                         </li>
+                        <li><small>VS</small></li>
                         <li>
-                            <h3>result</h3>
+                            <h3>{props.team2}</h3>
                         </li>
                     </ul>
                 </div>

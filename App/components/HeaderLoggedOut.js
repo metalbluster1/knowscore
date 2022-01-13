@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 
+import DispatchContext from '../DispatchContext'
+
 function HeaderLoggedOut() {
+
+    const appDispatch = useContext(DispatchContext)
+
     return (
         <header>
             <div className="main-header">

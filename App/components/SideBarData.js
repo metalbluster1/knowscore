@@ -17,6 +17,18 @@ export const SidebarData = [
         cName: 'sidenav-text'
     },
     {
+        title: 'Live',
+        path: '/uploadlive',
+        icon: <FaIcons.FaFileUpload />,
+        cName: 'sidenav-text'
+    },
+    {
+        title: 'Upcoming',
+        path: '/uploadupcoming',
+        icon: <FaIcons.FaFileUpload />,
+        cName: 'sidenav-text'
+    },
+    {
         title: 'AboutUs',
         path: "/about",
         icon: <FaIcons.FaInfoCircle />,
